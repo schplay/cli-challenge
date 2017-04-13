@@ -15,6 +15,26 @@ $loader->addNamespace('fileBrowser', '/controllers');
 
 $browser = new \fileBrowser\FileController();
 
+$mappings = [
+    [
+        65 => 'up',
+        66 => 'down',
+        68 => 'left',
+        67 => 'right',
+        56 => 'up',
+        50 => 'down',
+        52 => 'left',
+        54 => 'right',
+    ],
+    [
+        119 => 'up',
+        115 => 'down',
+        97 => 'left',
+        100 => 'right',
+    ],
+
+];
+
 system('stty cbreak -echo');
 $stdin = fopen('php://stdin', 'r');
 
